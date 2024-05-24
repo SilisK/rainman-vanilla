@@ -21,7 +21,6 @@ const wordBank = [
     {"word": "Mountain", "category": "Geographical Feature"}
 ]
 
-
 /**
  * 
  * @param {string} category 

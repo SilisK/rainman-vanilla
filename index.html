@@ -7,7 +7,29 @@
     <link rel="icon" href="rain.png" type="image/png" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
   </head>
-  <body>
+  <body style="overflow: hidden">
+    <img id="instructions-toggle" src="./assets/icons/info.png" class="icon" />
+    <!-- Modal -->
+    <div class="modal" style="display: none">
+      <!-- Banner -->
+      <div class="banner">
+        <h2>Instructions</h2>
+        <p>
+          In this game, you guess letters to uncover a <u>hidden word</u>. Guess
+          correctly to reveal letters, but be careful - each wrong guess costs
+          you!
+        </p>
+        <button>Got it!</button>
+      </div>
+    </div>
+    <!-- Lose Modal -->
+    <div class="modal lose" style="display: none">
+      <div class="banner">
+        <h2 id="failed-word">Failed Word</h2>
+        <p>Better luck next time!</p>
+        <button id="try-again-button">Try Again?</button>
+      </div>
+    </div>
     <header>
       <h1 class="logo">
         <img class="icon" src="./assets/icons/rainman-icon.png" />
@@ -24,9 +46,19 @@
     </section>
     <!-- Luck Status -->
     <section class="luck-status">
-      <h3 id="luck-counter">Luck: 10</h3>
+      <!-- <h3 id="luck-counter">Luck: 10</h3> -->
       <!-- High Luck -> BAD LUCK -->
-      <div></div>
+      <div class="layout">
+        <img
+          src="./assets/images/luck-10.jpg"
+          class="luck-graphic highlighted"
+        />
+        <img src="./assets/images/luck-9.jpg" class="luck-graphic" />
+        <img src="./assets/images/luck-8.jpg" class="luck-graphic" />
+        <img src="./assets/images/luck-7.jpg" class="luck-graphic" />
+        <img src="./assets/images/luck-6.jpg" class="luck-graphic" />
+        <!-- 10 Graphics Planned -->
+      </div>
     </section>
     <!-- Letter Bank -->
     <section class="letter-bank">
@@ -38,6 +70,17 @@
       <h2>Game Not Started Yet</h2>
       <button id="start-button">Start Game</button>
     </section>
+    <div
+      style="
+        display: none;
+        place-items: center;
+        box-sizing: border-box;
+        padding: 16px;
+      "
+      id="extra-options"
+    >
+      <button>Refesh Page</button>
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
