@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainman | Guess the word before your luck runs out!</title>
+    <link rel="icon" href="rain.png" type="image/png" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+        <img class="icon" src="./assets/icons/rainman-icon.png" />
+        Rainman
+      </h1>
+    </header>
+    <!-- Word -->
+    <section class="word-to-guess">
+      <h2 id="reveal-word">...word to solve</h2>
+      <h3 id="category">...category</h3>
+      <div id="word-fill">
+        <h4 class="character">?</h4>
+      </div>
+    </section>
+    <!-- Luck Status -->
+    <section class="luck-status">
+      <h3 id="luck-counter">Luck: 10</h3>
+      <!-- High Luck -> BAD LUCK -->
+      <div></div>
+    </section>
+    <!-- Letter Bank -->
+    <section class="letter-bank">
+      <p>Letter Bank</p>
+      <div class="letter-bank-container"></div>
+    </section>
+    <!-- Reset Game -->
+    <section class="start-game">
+      <h2>Game Not Started Yet</h2>
+      <button id="start-button">Start Game</button>
+    </section>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

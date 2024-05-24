@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+}
+
+body {
+  max-width: 2048px;
+  margin: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  padding: 24px;
+
+  background-color: gray;
+  background-image: url(../images/rainman-background.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+  font-size: larger;
+  font-size: 32px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 32px;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.icon {
+  max-width: 46px;
+}
+
+.logo {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.logo img {
+  background-color: white;
+  border-radius: 100%;
+  transition: 0.25s ease-in-out;
+}
+
+.logo img:hover {
+  box-shadow: 1px 1px 10px aliceblue;
+}
+
+.logo img:active {
+  padding: 3.5px;
+}
+
+#reveal-word {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.word-to-guess {
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  gap: 128px;
+}
+
+#word-fill {
+  max-width: 960px;
+  width: 100%;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+.character {
+  border-bottom: 4px solid black;
+  padding: 12px;
+  width: max-content;
+}
+
+.luck-status {
+  padding: 24px;
+  min-height: 120px;
+  background-color: rgb(210, 210, 210);
+}
+
+.letter-bank {
+  padding: 24px;
+  min-height: 60px;
+  display: grid;
+  place-items: center;
+  gap: 12px;
+}
+
+.letter-bank-container {
+  max-width: 1080px;
+  width: 90%;
+  padding: 24px;
+  border-radius: 64px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: space-evenly;
+  overflow-x: scroll;
+  gap: 32px;
+}
+
+.letter {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.letter:hover {
+  font-weight: bold;
+}
+
+.start-game {
+  display: grid;
+  place-items: center;
+  gap: 32px;
+  padding: 24px;
+  padding-bottom: 145px;
+  background-color: rgb(230, 230, 230);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 24px;
+  }
+}
